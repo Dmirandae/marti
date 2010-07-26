@@ -1,0 +1,195 @@
+\documentclass[nols]{tufte-book}% or tufte-handout
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+%%
+% Book metadata
+\title{{M}arti{T}racks Manual\thanks{Thanks to Marti, gone but never forgotten.}}
+\author[Daniel Rafael Miranda-Esquivel \& Susy Echeverr\'ia]{Daniel Rafael Miranda-Esquivel \& Susy Echeverr\'ia}
+%\footnote{20072010}
+\usepackage{natbib}
+\usepackage{drme}
+\usepackage{glossaries}
+
+
+\bibliographystyle{./diver_distri}
+
+\publisher{Published by the authors}
+
+
+
+\input{preamble-tufte.tex}
+
+
+% Generates the index
+\usepackage{makeidx}
+
+\makeindex
+% 
+% 
+% \begin{document}
+% \begin{figure} %[!ht]
+% \begin{center}
+% % \includegraphics[scale=0.15]{./logo0-marti.jpg}
+% \includegraphics{./graphics/logo0-marti.jpg}
+% 
+% \end{center}
+% \end{figure}
+% 
+% Front matter
+\frontmatter
+
+% r.1 blank page
+%\blankpage
+
+% v.2 epigraphs
+%\newpage\thispagestyle{empty}
+
+
+% r.3 full title page
+\maketitle
+
+
+% v.4 copyright page
+\input{copyleft.tex}
+
+\vfill
+\openepigraph{Life and Earth have evolved together}{Leon Croizat}
+\openepigraph{Analyses and Software have to evolve together}{The authors}
+
+% r.5 contents
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+% r.7 dedication
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+\noindent\fontsize{18}{22}\selectfont\itshape
+\nohyphenation
+Dedicated to those who appreciate good Biogeography and love dogs.
+\end{doublespace}
+%\vfill
+
+\chapter{Forewords}
+
+\input{forewords.tex}
+
+\mainmatter
+
+% r.9 introduction
+%\cleardoublepage
+
+\chapter{Introduction}
+\label{ch:panbio}
+
+\input{intro.tex}
+%%
+% Start the main matter (normal chapters)
+
+
+
+
+
+\chapter{PanTrack, the program}
+
+\input{pgtrack.tex}
+
+
+
+\chapter{Worked examples}
+
+\input{example1.tex}
+
+
+
+ 
+
+\chapter{PanTrack commands}
+\label{ch:commands}
+\index{commands}
+
+\section{Text interface mode}
+\label{ch:TUI_commands}
+\index{commands:text interface}
+
+
+	general
+	
+	l == list			List all tracks
+	
+	
+	comparisons *tracks*
+		
+	a == all			Track all the species using MSTs to compare			
+	
+	g == group			Track a group of contiguous species
+	
+	p == pair			Track a pair of species (contiguous or not)
+	  
+	In all the three cases a new MST=track will be created if the
+	species compared are congruent, while in a [p]air comparison
+	only a single track could be created. In an [a]ll/[g]roup 
+	comparison, there could be more than one track.
+
+
+	comparisons *segments*
+		
+	s == all			Track all the species using segments to compare			
+		
+	t == pair			Track a pair of species (contiguous or not)
+	  
+
+
+
+	join
+	
+	u == join group		Join a group of contiguous tracks if a given pair 
+						has a minimal congruence equal or higher than the
+						minimal congruence inputed in the value file or
+						the default value (0.85). If you want to join
+						a group regardless of the minimal congruence value,
+						reduce the min. cong. value to 0.0. After this late
+						analysis, replace the original min. cong. value
+						
+	j == join pair		Join two, contiguous or not, tracks independent of
+						the minimal congruence value
+						
+
+	congruence calculation
+	
+	o == congr. group	Calculate the congruence by pairs of a contiguous group,
+						as ther output is a list, is easier to reade a small 
+						group than a large group
+							
+	n == congr. pair	Calculate the congruence of a single pair 
+	
+
+	modify decision rules
+	
+	c == cut			Change the minimal cut value
+	r == rules			Modify R1, R2, and R3
+	m == min. cong.		Change the minimal congruence value (see join)
+	
+
+
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+
+
+
+
+
+
+
+\backmatter
+
+\bibliography{manual}
+
+
+\printindex
+
+\end{document}
+

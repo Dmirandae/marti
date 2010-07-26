@@ -1,0 +1,133 @@
+
+\section*{Definitions}
+
+% %
+% %CADA activida debeestar ligada
+% a un deseo potencial
+% 
+% imnPGT you cando X and Y. To do X 
+% 
+
+
+PanGeotrack algorithm has been presented in our paper (CITA), therefore we suggest you to read the paper first.
+
+
+
+
+The program tracks MST or segments, therefore you can conduct your analysis in either of those two ways.
+
+
+\section*{The program and its calculations}
+	
+% \subsection*{PT initial definitions}
+
+
+
+If you use MST, the species' MST will be compared to all species MST, comparing each segment but outputing the answer by species, so you can expect at most nsp posible tracks, where nsp is the number of initial species.
+	
+
+\vspace{-7\baselineskip}\footnotetext{nsp = number of species}
+\vspace{7\baselineskip}
+
+If you use segments each segment will be compared to all species MST, comparing each segment but outputing the answer by segments, so you 	can expect at most nsegs, where nseg is
+	
+	sum MST(i)
+		j=1 -$>$ nsp
+		i=number of segments MST(j)
+		    
+		
+As all segments or MST are not congruent, the real number of answers lies in a number smaller than those.
+
+
+
+\subsection*{PT files. general information}
+
+\subsection*{PT input files}
+
+PT uses three types of files,
+
+1. -the input file with the distributional data. Only the input file is mandatory
+	
+2. -the values file with the values for ṕarameters  and the commands to be executed in bash 
+	
+
+\subsection*{PT output file}
+	
+and creates the kml output file
+
+
+\subsection*{PT input file}
+
+\mt accepts as an input, a text file conformed of three columns,
+	
+	labels   lat   long
+	
+
+separated by tabs or spaces but not commas (,), most spreadsheet and SIG programs can output shuch text files, or you can use awk/bash to reshape them. 
+
+
+\label{valid_data_set}
+\index{valid input data set}
+
+\vspace{-7\baselineskip}\footnotetext{a valid data set = test0.dat
+
+\begin{center} 
+\begin{tabular}{lll}
+sp1 & 1 & 9\\
+sp1 & 3 & 11\\
+sp1 & 6 & 12\\
+sp2 & 1 & 9\\
+sp2 & 1 & 10\\
+sp2 & 3 & 10\\
+sp2 & 4 & 11\\
+sp2 & 5 & 12\\
+sp2 & 6 & 12\\
+sp3 & 4 & 13\\
+sp3 & 5 & 11\\
+sp3 & 8 & 8\\
+sp4 & 4 & 12\\
+sp4 & 6 & 11\\
+sp4 & 7 & 8\\
+sp5 & 8 & 8\\
+sp5 & 7 & 6\\
+sp5 & 8 & 2\\
+sp6 & 8 & 8\\
+sp6 & 7 & 5\\
+sp6 & 8 & 3
+\end{tabular}
+% \caption{data from test0.dat}
+ 
+
+\end{center}
+
+}
+\vspace{7\baselineskip}
+	
+As an example we include 
+
+		-a bash+awk command file that converts a comma delimitated file in a PT inputfile (csv2pt.sh)
+
+		-a bash+awk command file that converts a GlobalMapper output in a PT inputfile (gm2pt.sh)
+
+
+\vspace{-7\baselineskip}\footnotetext{note: if your label field includes inner tabs/spaces, these will be
+	considered as field separator therefore are NOT allowed, you can replace 
+	such character by an underscore or delete them all (PT converts the dash to underscore)}
+\vspace{7\baselineskip}
+		 
+	 
+
+\vspace{-7\baselineskip}\footnotetext{A common mistake is different labels for the same species, although PT
+	is not case sensitive, it is (quite) sensitive to mispellings therefore
+	Agnus agnus are the same, while Agnus, ajnus or Egnus are not.}
+\vspace{7\baselineskip}
+	
+	
+\subsection*{PT output file}
+
+PT writes kml files, with or without the initial tracks. With all the analyses made before closing, in the form of tracks or points.
+	The output is easily readable using google-earth or GIS programs as
+	QGIS. As some programs may or mat not read the output, we only keep
+	compatibility with google-earth/QGIS. If your beloved GIS program
+	does not read PT output, please consider read it with google-earth.  
+

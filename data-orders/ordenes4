@@ -1,0 +1,15 @@
+quiet
+group 1 5
+reducegroup
+group 6 11
+reducegroup
+group 12 15
+reducegroup
+group 16 19
+reducegroup
+group 20 22
+reducegroup
+group 23 26 
+reducegroup
+trackjoinnew
+nodes

@@ -1,0 +1,21 @@
+\contentsline {chapter}{Forewords}{11}{chapter*.4}
+\contentsline {chapter}{Introduction}{13}{chapter*.5}
+\contentsline {section}{Panbiogeography}{13}{section*.6}
+\contentsline {subsection}{Track analysis}{14}{section*.6}
+\contentsline {subsection}{Croizat's manual reconstruction}{15}{section*.6}
+\contentsline {subsection}{Page's Spanning graphs}{16}{section*.6}
+\contentsline {subsection}{Craw's tracks compatibility analysis}{16}{section*.6}
+\contentsline {subsection}{Parsimony Analysis of Endemicity}{17}{section*.6}
+\contentsline {section}{Suggested literature}{18}{section*.6}
+\contentsline {chapter}{PanTrack, the program}{21}{chapter*.7}
+\contentsline {chapter}{Worked examples}{23}{chapter*.8}
+\contentsline {section}{Download the program and a data set}{23}{section*.9}
+\contentsline {section}{Command modes}{23}{section*.9}
+\contentsline {subsection}{Text user interface}{24}{section*.9}
+\contentsline {subsection}{Command line interface}{26}{section*.9}
+\contentsline {subsection}{Final results of test0.dat}{28}{Item.5}
+\contentsline {chapter}{PanTrack commands}{29}{chapter*.10}
+\contentsline {section}{Text interface mode}{29}{section*.11}
+\contentsline {chapter}{Bibliography}{31}{chapter*.12}
+\contentsline {chapter}{Index}{37}{chapter*.13}
+\contentsfinish 
