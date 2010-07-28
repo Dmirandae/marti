@@ -57,7 +57,7 @@ regla1:=0.500;
 regla2:=0.250;
 regla3:=0.750;
 congruencia_minima:=0.85;
-tipo:='xyl';
+tipo:='lxy';
 
 
 	if (alpha='') then unodos1 else 	
@@ -101,9 +101,9 @@ if TengoParam then
 			begin
  				Assign  (param, gamma);
         		Reset  (param); 
-        		readln(param,stemp1,uno);  
-        		if (orden(stemp1)='data') and (orden(uno)='xyl') then tipo:='xyl';
-        		if (orden(stemp1)='data') and (orden(uno)='lxy') then tipo:='lxy';
+        		readln(param,stemp1);  
+        		if (orden(stemp1)='dataxyl') then tipo:='xyl';
+        		if (orden(stemp1)='datalxy') then tipo:='lxy';
         		close(param);
         		end;
  
@@ -115,10 +115,11 @@ if  TengoOrden then
       			end;
         	
 
-writeln(alpha,#9,' Infile:   ',TengoIn);
+writeln(alpha,#9,' Infile:   ',TengoIn,' type: ',tipo);
 writeln(beta,#9, ' Outfile:  ',TengoOut);
 writeln(gamma,#9,' Param:    ',TengoParam);
 
+sleep(500);
 //halt;
 
 end; {acomodar_archivos}

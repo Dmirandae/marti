@@ -67,6 +67,7 @@ num_especies:=0;
 numRespuestas:=0;
 
 hicelistado:=false;
+
 if TengoIn then entrar_datos_xy(tipo);
 nspp:=num_especies;
 

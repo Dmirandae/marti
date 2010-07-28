@@ -1,3 +1,4 @@
+
 //cosas raras
 
 // se debne eliminar todos los puntos1 y pasar todo a objetos
@@ -15,6 +16,35 @@ end;
 
 
 
+
+function leer_especie:string;
+
+var
+
+c0			
+			:   char;
+               
+s1
+			: 	string;
+				
+begin
+s1:='';
+repeat
+read(entrada,c0);
+if c0='#' then 
+				begin 
+				readln(entrada); 
+				s1:=leer_especie; 
+				end;
+s1:=s1+c0; 
+until  (c0=' ') or (c0='"') or (eof(entrada)) or (eoln(entrada));
+leer_especie:=orden(s1);
+end;
+
+
+
+
+
 procedure matriz_distancia(Puntos_matriz: tipopuntos);
 
 var
@@ -23,10 +53,10 @@ i,j: integer;
 
 begin {matriz_distancia}
 
-if prekaos then writeln('calculando distancia');
+if prekaos then writeln('calculating distance');
 	begin
 	// inicializado del a matriz a valor inf
-	// writeln (salida,numpuntos);
+
 	for i:= 1 to Puntos_matriz^.numero do
 	for j:= 1 to Puntos_matriz^.numero do
 	begin
@@ -1246,7 +1276,13 @@ begin {entrar_un_punto}
 
 
 if datos='xyl' then readln (entrada,x,y,especie0);
-if datos='lxy' then readln (entrada,especie0,x,y);
+
+if datos='lxy' then begin
+					especie0:=leer_especie;
+					readln (entrada,x,y);
+					end;
+
+
 
 especie0:=orden(especie0);
 
@@ -1315,8 +1351,13 @@ begin {entrar_datos}
 
 
 if datos='xyl' then readln (entrada,x,y,especie1);
-if datos='lxy' then readln (entrada,especie1,x,y);
 
+if datos='lxy' then begin
+					especie1:=leer_especie;
+					readln (entrada,x,y);
+					end;
+
+//if datos='lxy' then begin readln (entrada,especie1);
 
 especie1:=orden(especie1);
 
@@ -1344,12 +1385,26 @@ end; {entrar_datos}
 
 procedure soloverdad;
 begin
+if kmlgen then 
+		begin
 		for itemp:=1 to nspp do
 				begin
 				if (pTrazo[itemp]^.num_tramos>0) and pTrazo[itemp]^.g_track  then trck2kml(itemp);
 				clrscr;
 				writeln('Tracks ',itemp,' to ',nspp,' written to kml output');
 				end;
+		end;
+
+if kmlall then 
+		begin
+		for itemp:=1 to nspp do
+				begin
+				if (pTrazo[itemp]^.num_tramos>0)  then trck2kml(itemp);
+				clrscr;
+				writeln('Tracks ',itemp,' to ',nspp,' written to kml output');
+				end;
+		end;
+		
 end;
 
 

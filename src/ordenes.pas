@@ -1,6 +1,7 @@
 
 
 
+
 procedure entrar_comandos;
 
 var
@@ -33,8 +34,11 @@ end;
 
 begin {entrar_comandos}
 
-prekaos:=true;
-clrscr;
+				prekaos:=true;
+				clrscr;
+   				max:=num_especies;
+   				min:=1;
+   				kmlgen:=true;
 
 writeln ('Reading instructions...');
 i:=0;
@@ -63,7 +67,6 @@ if (not eof(ordenes)) then writeln ('Reading line ',i,' = ',orden1);
  if orden1 =  'croizat0' then
    				begin
    				ordenok:=true;
-   				printkml:=false;
 				printkml:=false;
 				salidausada:=true;
    				jointracks(1,num_especies);
@@ -88,15 +91,27 @@ if (not eof(ordenes)) then writeln ('Reading line ',i,' = ',orden1);
    				end;
 
 
-
-if orden1 =  'data' then
+ if orden1 =  'kmlgen' then
    				begin
    				ordenok:=true;
-   				readln(ordenes,orden1);
-   				orden1:=orden(orden1);
-   				if orden1 =  'xyl' then tipo:='xyl';
-   				if orden1 =  'lxy' then tipo:='lxy';
-   				if orden1 =  '' then tipo:='lxy';
+   				kmlgen:=true;
+   				end;
+
+
+ if orden1 =  'kmlall' then
+   				begin
+   				ordenok:=true;
+   				kmlgen:=false;
+   				kmlall:=true;
+   				end;
+
+
+
+if (orden1 =  'dataxyl') or (orden1 =  'datalxy')   then
+   				begin
+   				ordenok:=true;
+   				if orden1 =  'dataxyl' then tipo:='xyl';
+   				if orden1 =  'datalxy' then tipo:='lxy';
    				end;
 
 if orden1 =  'set' then
@@ -332,8 +347,11 @@ if orden1 =  'jointrackgroup' then
 
  
 sleep(500);
-if (not ordenok) and (not eof(ordenes)) then writeln('Cannot understand ', orden1);
-sleep(500);
+if (not ordenok) and (not eof(ordenes)) then begin 
+	writeln('Cannot understand ', orden1);
+	sleep(5000);
+	end;
+
  end;
  
 end; {entrar_comandos}

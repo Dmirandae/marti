@@ -111,7 +111,9 @@ salidausada,
 hicelistado,
 ordenok,
 buscandonodos,
-nodoshay
+nodoshay,
+kmlall,
+kmlgen
 				: boolean;
 
 
