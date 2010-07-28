@@ -1,0 +1,6 @@
+#num especies= 6
+#num total tracks= 6
+1. sp1_sp2_ 3 640.000 gtrack TRUE
+3. sp3_ 2 648.000 gtrack FALSE
+4. sp4_ 2 540.000 gtrack FALSE
+5. sp5_sp6_ 4 648.000 gtrack TRUE

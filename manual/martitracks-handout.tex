@@ -1,0 +1,113 @@
+%\documentclass[nols]{tufte-book}% or tufte-handout
+\documentclass{tufte-handout}
+
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+%%
+% Book metadata
+\title{{M}arti{T}racks Manual\thanks{Thanks to Marti, gone but never forgotten.}}
+\author[Daniel Rafael Miranda-Esquivel \& Susy Echeverr\'ia]{Daniel Rafael Miranda-Esquivel \& Susy Echeverr\'ia}
+%\footnote{20072010}
+\usepackage{natbib}
+\usepackage{drme}
+
+
+\bibliographystyle{./diver_distri}
+
+\publisher{Published by the authors}
+
+
+
+\input{preamble-tufte.tex}
+
+
+% Generates the index
+%\usepackage{makeidx}
+
+%\makeindex
+% 
+% 
+% 
+\begin{document}
+% \begin{figure} %[!ht]
+% \begin{center}
+% % \includegraphics[scale=0.15]{./logo0-marti.jpg}
+% \includegraphics{./graphics/logo0-marti.jpg}
+% 
+% \end{center}
+% \end{figure}
+% 
+% Front matter
+
+% r.1 blank page
+%\blankpage
+
+% v.2 epigraphs
+%\newpage\thispagestyle{empty}
+
+
+% r.3 full title page
+\maketitle
+
+
+% v.4 copyright page
+\input{copyleft.tex}
+
+\vfill
+\openepigraph{Life and Earth have evolved together}{Leon Croizat}
+\openepigraph{Analyses and Software have to evolve together}{The authors}
+
+
+\chapter{Forewords}
+
+\input{forewords.tex}
+
+\mainmatter
+
+% r.9 introduction
+%\cleardoublepage
+
+\chapter{Introduction}
+\label{ch:panbio}
+
+\input{intro.tex}
+%%
+% Start the main matter (normal chapters)
+
+
+
+
+
+\chapter{PanTrack, the program}
+
+\input{pgtrack.tex}
+
+
+
+\chapter{Worked examples}
+
+\input{example1.tex}
+
+
+
+ 
+
+\chapter{PanTrack commands}
+
+
+\input{commands.tex}
+
+
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+
+
+\backmatter
+
+\bibliography{manual}
+
+
+\printindex
+
+\end{document}
+

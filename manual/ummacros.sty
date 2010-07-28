@@ -1,0 +1,217 @@
+%
+% Idenfification
+%
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+
+\ProvidesClass{ummacros}[2010/02/21 v0.0.1 Ubuntu manual macros]
+
+%
+% Load packages
+%
+
+\RequirePackage{xifthen}
+\RequirePackage[load=abbr,mode=text,alsoload=binary]{siunitx}% proper spacing and names for units
+
+% A command that prints an interrupting dash.  Varies per language.  (For example, US is ``---'' without spacing, UK is `` -- '' with space.)
+\newcommand{\dash}{\unskip\penalty0---\ignorespaces}
+
+%
+% Format the document style
+%
+
+% Ubuntu color palette
+\definecolor{UbuntuOrange}              {HTML}{FF6309}% Ubuntu orange
+\definecolor{UbuntuYellow}              {HTML}{FFB515}% Ubuntu yellow
+\definecolor{UbuntuRed}                 {HTML}{C90016}% Ubuntu red
+\definecolor{OrangeHilight}             {HTML}{EEC73E}% oranges
+\definecolor{Orange}                    {HTML}{F0A513}
+\definecolor{OrangeBase}                {HTML}{FB8B00}
+\definecolor{OrangeShadow}              {HTML}{F44800}
+\definecolor{AccentYellowHilight}       {HTML}{FDFF99}% yellows
+\definecolor{Yellow}                    {HTML}{FFFF00}
+\definecolor{AccentYellowBase}          {HTML}{FDCA01}
+\definecolor{AccentYellowShadow}        {HTML}{986601}
+\definecolor{AccentOrange}              {HTML}{F44800}% reds
+\definecolor{AccentRed}                 {HTML}{FD3301}
+\definecolor{AccentRedBase}             {HTML}{D40000}
+\definecolor{AccentDeepRed}             {HTML}{980101}
+\definecolor{HumanHighlight}            {HTML}{FDD99B}% skin tones
+\definecolor{Human}                     {HTML}{D9BB7A}
+\definecolor{HumanBase}                 {HTML}{816647}
+\definecolor{EnvironmentalShadow}       {HTML}{565248}
+\definecolor{EnvironmentalBlueHighlight}{HTML}{AACCEE}% environmental blues
+\definecolor{EnvironmentalBlueMedium}   {HTML}{6699CC}
+\definecolor{EnvironmentalBlueBase}     {HTML}{336699}
+\definecolor{EnvironmentalBlueShadow}   {HTML}{003366}
+\definecolor{AccentBlueHighlight}       {HTML}{B3DEFD}% accent blues
+\definecolor{AccentBlue}                {HTML}{0197FD}
+\definecolor{AccentBlueBase}            {HTML}{0169C9}
+\definecolor{AccentBlueShadow}          {HTML}{013397}
+\definecolor{AccentGreenHiglight}       {HTML}{CCFF99}% greens
+\definecolor{AccentGreen}               {HTML}{98FC66}
+\definecolor{AccentGreenBase}           {HTML}{339900}
+\definecolor{AccentGreenShadow}         {HTML}{015A01}
+\definecolor{UbuntuToner}               {HTML}{002B3D}% toner
+\definecolor{AccentMagentHighlight}     {HTML}{FF9BFF}% magentas
+\definecolor{AccentMagenta}             {HTML}{FF00FF}
+\definecolor{AccentDarkViolet}          {HTML}{6600CC}
+
+\definecolor{important}{HTML}{980101}% same as accent deep red
+
+%
+% Define useful macros
+%
+
+\newcommand{\notecallout}[2][Note]{%
+  \marginnote{\textbf{#1:} #2}
+}
+
+\newcommand{\marginnote}[1]
+{%
+  \marginpar{%
+      %\begin{minipage}{\marginparwidth}%
+        \raggedright\sffamily\footnotesize%
+        \hspace{0pt}#1%
+      %\end{minipage}%
+  }%
+}
+
+
+% An environment for displaying terminal output
+% po4a: environment terminal
+\newenvironment{terminal}{%
+  \begin{quotation}
+    \unskip\noindent\ttfamily\parskip0pt\parindent0pt\obeylines\ignorespaces%
+}{%
+  \end{quotation}%
+}
+
+% An environment to set the list of credits (names) in three columns.
+% po4a: environment credits
+\newenvironment{credits}[1][]{%
+  \begin{multicols}{3}[#1]%
+    \parskip0pt%
+    \parindent0pt%
+    \let\item\par%
+    \small%
+}{%
+  \end{multicols}%
+}
+
+% Macros to distinguish prompts and user input from program output in terminal displays
+\newcommand{\prompt}{\texttt{\$}~}
+\newcommand{\rootprompt}{\texttt{\#}~}
+\newcommand{\userinput}[1]{{\ttfamily\textcolor{AccentDeepRed}{#1}}}% FIXME we'll adjust this formatting later -- red for easy editing at the moment
+\newcommand{\code}[1]{{\ttfamily#1}}
+
+% Macro for advanced usage notes
+\newcommand{\advanced}[1]{%
+  \smallskip%
+  \begin{center}
+  \noindent%
+  \hspace{\parindent}%
+  \begin{minipage}[t]{0.25in}%
+    % FIXME \vspace{-\baselineskip}\includegraphics[width=0.25in]{warning.eps}\vspace{0pt}
+    \centering\Huge\textcolor{AccentDeepRed}{\textbf{!!}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\linewidth-0.5in}%
+    \vspace{-\baselineskip}\small\em#1%
+  \end{minipage}%
+  \hspace{\parindent}%
+  \end{center}
+  \smallskip\par%
+}
+
+% Macro for warning notes
+\newcommand{\warning}[1]{%
+  \smallskip%
+  \begin{center}
+  \noindent%
+  \hspace{\parindent}%
+  \begin{minipage}[t]{0.25in}%
+    % FIXME \vspace{-\baselineskip}\includegraphics[width=0.25in]{warning.eps}\vspace{0pt}
+    \centering\Huge\textcolor{AccentDeepRed}{\textbf{!}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\linewidth-0.5in}%
+    \vspace{-\baselineskip}\small\em#1%
+  \end{minipage}%
+  \hspace{\parindent}%
+  \end{center}
+  \smallskip\par%
+}
+
+
+% Macro for typesetting menu selection sequences.
+% \nav{Menu \then Submenu \then Subsubmenu} would generate text looking like
+% ``Menu --> Submenu --> Subsubmenu''.
+%\newcommand{\smallarrow}{\raisebox{0.333ex}{\scalebox{0.5}{\ding{228}}}}
+\@ifpackageloaded{fontspec}{%
+  \newcommand{\smallarrow}{‣}%
+}{%
+  \newcommand{\smallarrow}{\raisebox{0.250ex}{\scalebox{0.5}{\ding{228}}}}
+}
+\newcommand{\nav}[1]{%
+  \begingroup%
+    %\def\then{\unskip\ensuremath{\,\rightarrow\,}\ignorespaces}%
+    \def\then{\unskip\,\smallarrow\,\allowbreak\ignorespaces}%
+    \textbf{#1}%
+  \endgroup%
+}
+
+% Macro to format application names and index them
+\newcommand{\application}[1]{%
+  \textbf{#1}%
+  \index{#1}\index{applications!#1}%
+}
+
+% Macro to format command line programs and index them
+\newcommand{\commandlineapp}[1]{%
+  \textbf{#1}%
+  \index{#1}\index{command line!#1}%
+}
+
+% Macro to simplify linking to chapters
+\newcommand{\chaplink}[1]{%
+  % not using \autoref here because I don't want to fix the case of \chapterautorefname for individual languages --godbyk
+  \IfBeforeSubStringEmpty{ch:}{#1}{\hyperref[#1]{\@chapapp~}\ref{#1}\hyperref[#1]{: }\nameref{#1}}{\hyperref[ch:#1]{\@chapapp~}\ref{ch:#1}\hyperref[ch:#1]{: }\nameref{ch:#1}}%
+}
+
+% Macro to simplify linking to sections
+\newcommand{\seclink}[1]{%
+  %\IfBeforeSubStringEmpty{sec:}{#1}{\autoref{#1}\hyperref[#1]{: }\nameref{#1}}{\autoref{sec:#1}\hyperref[sec:#1]{: }\nameref{sec:#1}}%
+  \IfBeforeSubStringEmpty{sec:}{#1}{\nameref{#1}}{\nameref{sec:#1}}%
+}
+
+% Macros to format UI elements
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\tab}[1]{\textbf{#1}}
+\newcommand{\dropdown}[1]{\textbf{#1}}
+\newcommand{\checkbox}[1]{\textbf{#1}}
+\newcommand{\menuitem}[1]{\textbf{#1}}
+\newcommand{\window}[1]{``#1''}
+\newcommand{\keystroke}[1]{\texttt{#1}}
+\newcommand{\radiobutton}[1]{\textbf{#1}}
+\newcommand{\textfield}[1]{\textbf{#1}}
+\newcommand{\option}[1]{\enquote{#1}}
+\let\menu\nav
+
+% Screenshot placeholder
+\newcommand*{\screenshotslog}{screenshots.log}
+\newwrite\screenshots
+\newcommand{\screenshotTODO}[1]{%
+  \immediate\write\screenshots{Chapter \thechapter, page \thepage: #1}%
+  %\immediate\closeout\screenshots%
+  \par\noindent\parbox{\linewidth}{\begin{center}\sffamily\bfseries\color{important} M~I~S~S~I~N~G~~~S~C~R~E~E~N~S~H~O~T\par\medskip\footnotesize\normalcolor#1\end{center}}\par%
+}
+\AtBeginDocument{\immediate\openout\screenshots=\screenshotslog}% open the screenshots.log file
+\AtEndDocument{\immediate\closeout\screenshots}% close the screenshots.log file
+
+%
+% All done!
+%
+
+\endinput
+

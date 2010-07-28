@@ -1,0 +1,247 @@
+
+\section{Panbiogeography}
+
+Panbiogeography is a unique and very useful approach to capture any
+distributional pattern/structure in studies that use geographical data. Mapping
+biogeographic tracks is a cost efficient way to reduce the initial complexity
+that we find in the data sets \citep{Craw1989a}, as Croizat's tracks analysis
+\citep{croizat1952, Croizat1958} provides a conceptual
+framework for understanding the biogeographic structure and the relationships of
+areas.
+
+\index{Croizat:books}
+Panbiogeography was developed by Croizat in his books, ''Manual of
+phytogeography''\citep{croizat1952}, ''Panbiogeography''\citep{Croizat1958} and
+''Space, Time, Form: The Biological Synthesis''\citep{Croizat1964}.
+Panbiogeography was inspired by Croizat's idea of connecting two essential
+elements in evolution: Space and Time: Earth and Life evolve together, which
+means that biotas evolve together with the geographic barriers
+\citep{MorroneCrisci1995, Morrone2000}.
+
+Croizat's panbiogeography constituted a unique critique to Darwin's biogeography
+ideas about natural selection, means of dispersal and geographic distribution
+\citep{Craw1987}. This approach challenged the idea that means of
+dispersal are the principal factors responsible for the evolution of the
+distribution \citep{Craw1989b, Crawetal1999}.
+
+Panbiogeography assumes that taxa distribution evolves through two stages:
+mobilism and immobilism. The interaction of these two states is called vicariant
+form-making model. Within the mobilism stage, an ancestor taxon expands to
+establish on new territory through its means of dispersal (''means of
+survival'') when the geographic and climatic factors are favorable. Later, when
+the range geographic is established (immobilism) the appearance of barriers
+allows the isolation and differentiation of taxa (vicariant form-making)
+\citep{Grehan1988a, Michaux1989,  Crawetal1999, CrisciMorrone1992a}.
+
+Panbiogeography has been considered an independent research program because is
+the only approach that focuses on the spatial or geographical sector as a
+fundamental pre-condition to any analysis of the patterns and processes of
+evolutionary change \citep{Crawetal1999, Grehan1994, Grehan2001a}.
+
+The assumptions that make the Panbiogeography different from other historical
+biogeography approaches are \citep[][:19]{Crawetal1999}:
+\index{Panbiogeography:assumptions}
+''1. Distribution patterns constitute an empirical databases for biogeographical
+analysis.
+
+2. Distribution patterns provide information about where, when, and how animals
+ans plants evolve;
+
+3. The spatial and temporal component of these distribution patterns can be
+graphically represented;
+
+4. Testable hypothesis about historical relationship between the evolution of
+distributions and Earth history can be derived from geographic correlations
+between distribution graphs as geological/geomorphic features.''
+
+
+
+
+\subsection{Track analysis}
+
+
+Panbiogeography as a biogeographic method is called track analysis. There
+are four principal concepts within this method: track, node, main massing, and
+baseline \citep{CrisciMorrone1992a, Crawetal1999, Grehan2001a,
+Espinosaetal2002}.
+\index{Track analysis}
+\index{Track analysis:individual tracks}
+
+Individual tracks are the basic units of panbiogeography. These are lines drawn
+on a map that connect different localities or distribution points of a
+particular taxon or group of taxa, so that the sum of the segment lengths that
+connect all the distribution points is the smallest possible. In the graph
+theory words, the individual track is a minimum spanning tree
+\citep{Crawetal1999, Morrone2004c, Page1987}
+\index{Track analysis:generalized tracks}
+
+Generalized tracks or standard tracks are called repetitive patterns because
+summarized distributions of diverse individual taxa \citep{Michaux1989}. These
+are lines on a map resulting from the superimposition of the individual tracks.
+Generalized tracks are interpreted as distributional patterns of ancestral biota
+that had been fragmented by tectonic and climatic events \citep{Craw1988}. These
+panbiogeographic element is considered conjectures on a common biogeography
+history or primary biogeography homology sensu  \citet{Morrone2001a}, which means
+that analyzed taxa are spatiotemporally integrated in a biota \citep{Craw1983a,
+Morrone2001a, Morrone2004c}.
+\index{Track analysis:nodes}
+
+Nodes are areas or localities where two or more generalized tracks are
+overlapped. These are complex areas or tectonic and biotic convergence zones
+\citep{Craw1988b, CrisciMorrone1992a, Morrone2004c, Page1987}. The nodes are
+considered priority areas for conservation or sites of biological endemism
+because represented localities of high diversity, distribution boundaries,
+disjunction, incongruence and recombination, specimens that are difficult to
+identify and unusual hybrids \citep{Crawetal1999, MorroneEspinosa1998,
+Grehan1993}.
+
+
+The Panbiogeographic method involves basically main three steps
+\citep{Morrone2004c}: Firstly, construction of two or more taxon individual
+tracks (minimum spanning tree from distributional localities). Secondly,
+delimitation of generalized tracks through geographic congruence between
+individual tracks. Finally, determination of nodes within the intersection areas
+between generalized tracks.
+
+There are different approaches within panbiogeographic method. Croizat`s manual
+reconstruction \citep{Croizat1958, Croizat1964}, Page's Spanning graphs
+\citep{Page1987}, Craw's Track compatibility \citep{Craw1989a} and PAE
+(''Parsimony Analysis of Endemicity'') \citep{Rosen1984, Crawetal1999,
+Luna-vegaetal2000, MorroneMarquez2001}
+\index{PAE}
+
+\index{Track analysis:manual reconstruction}
+
+
+\subsection{Croizat's manual reconstruction}
+
+Croizat's manual reconstruction is done by drawing on a map taxon's individual
+tracks and then overlapping them to determinate generalized tracks. Basically
+the method consists of the following steps \citep{Morrone2004c}:
+
+1. Connect the disjunct areas of distribution by lines forming individual tracks,
+
+2. The individual tracks are oriented using baselines,
+
+3. Overlap individual tracks to determinate generalized tracks,
+
+4. Recognize the nodes where two or more generalized tracks are intersected,
+
+5. Indicate on a map the generalized tracks,baselines and nodes.
+
+
+\subsection{Page's Spanning graphs}
+
+Page's Spanning graphs was the first attempt to quantify the panbiogeographic
+analysis using graph theory. Its main methodological steps are \citep{Page1987}:
+\index{Page's Spanning graphs}
+
+1. connect the disjunct areas of distribution through a MST (Minimum Spanning
+Trees) forming an individual track for each species,
+
+2. Construct incidence and connectivity
+matrices for individual tracks to recognized shared elements and track
+congruence,
+
+3. Construct a connectivity matrix for all tracks together to search
+circuits that indicate incongruence tracks,
+
+4. Indicate on a map the generalized
+tracks, baselines and nodes.
+
+\subsection{Craw's tracks compatibility analysis}
+\index{Craw's tracks compatibility analysis}
+
+Craw's tracks compatibility analysis \citep{Craw1989a} involves finding the
+largest clique of compatible tracks through a locality/distribution per track
+matrix \citep{Crawetal1999}. In general, its algorithm involves the following
+steps \citep{Craw1989a, Grehan2001c, Morrone2004c}:
+
+1. Construct individual tracks for different taxa from distribution localities using a MST,
+
+2. Generate an areas matrix for individual tracks where the presence of the areas is
+represented by ''1'' and absence by ''0''.
+
+3. Find the largest clique for compatible individual tracks which is considered the generalized track.
+
+4. Evaluate statistically the generalized track,
+
+5. Indicate on a map the
+generalized tracks, baselines, and nodes.
+
+
+\subsection{Parsimony Analysis of Endemicity}
+
+\index{PAE:algorithm}
+
+PAE (''Parsimony Analysis of Endemicity'') has been considered a
+panbiogeographic method \citep{Crawetal1999, Luna-vegaetal2000,
+MorroneMarquez2001, Morrone2004c}. Its algorithm includes the following steps
+\citep {Morrone2004c}:
+
+1. Construct individual tracks for different taxa from distribution localities using a MST,
+
+2. Generate an areas matrix for individual tracks where the presence of a species is represented by ''1'' and the absence by ''0''. Within this step, an extra area is added with ''0'' (all species absence) for polarized areas cladogram,
+
+3. Analize the matrix using a parsimony algorithm. Each clade formed by at least two individual tracks is considered a generalized track,
+
+4. ''Disconnect'' or delete the species that support the different clades and reanalyze the matrix to search clades that are supported by other taxa,
+
+5. Indicate on a map the generalized tracks, baselines and nodes.
+
+Since \citet{Croizat1958, Croizat1964} presented his panbiogeographic method,
+the above mentioned quantitative techniques had been proposed, Page's graph
+theory method \citep{Page1987},
+Henderson's analysis \citep{Henderson1989}, which is similar to Page's analysis,
+and Craw's compatibility track analysis \citep{Craw1989a}. These techniques have
+emerged taking
+into account Croizat's framework for analysis: individual tracks congruence to
+define generalized tracks \citep{Page1987, Henderson1989, Craw1989b}.
+\citet{Page1987} suggested a quantitative approach using graph theory by
+incidence and connectivity matrices, but this method has not been applied to
+real data, perhaps because of its difficult calculation and computational
+complexity. \citet{Craw1989a} proposed the compatibility track analysis based on
+distributional compatibility which is analogous with Meacham's character
+compatibility approach \citep{Meacham1984} to phylogenetic systematics
+\citep{Crawetal1999}. Within the latter method, two or more individual tracks
+are considered compatible if either one is included within or replicated by the
+other. \citet{MorroneCrisci1995} claimed that the compatibility in
+Panbiogeography is used in a restricted way depending on the method.
+''Non-overlapping tracks'' are incompatible according to compatibility track
+analysis and should be compatible in Croizat's track analysis by geographic
+proximity.
+
+Within the quantitative techniques proposed in the history of the
+panbiogeography \citep{Page1987, Craw1989a, Henderson1989}, only
+Craw`s compatibility tracks analysis has been implemented and now part of the
+algorithm, the minimal spanning tree, has been automated in the software
+package ''Croizat'' \citep{Cavalcanti2009b}.
+
+Grid analysis such as PAE (Parsimony Analysis of Endemicity) has been
+considered a panbiogeographic approach \citep{Crawetal1999, Luna-vegaetal2000,
+MorroneMarquez2001, Morrone2004c}, but some authors do not consider it a
+historical biogeography method \citep{Humphries2000, Garcia-Barros2002}.
+Although this method has been widely used \citep{Luna-vegaetal2000,
+MorroneMarquez2001, Huidobroetal2006, Mihocetal2006, Espinosa-Perezetal2009,
+Contreras-Medinaetal2007}, its implementation to the panbiogeographic analysis
+was secondary. Its direct objective is the analysis of endemism and its relation
+to the track analysis sensu Croizat could become ambiguous.
+
+Despite of these methods, Croizat's manual reconstruction has been the most used
+in panbiogeographic studies because its simplicity and the alleged direct
+connection to Croizat's panbiogeographic concept. Nevertheless, the debate about
+the reliability of the manual reconstruction is still
+valid. The method turns to be ambiguous and generates subjective results with
+large data set due to overcrowded points \citep{Franco-Rosselli2001, Liria2008}.
+
+
+
+\section{Suggested literature}
+
+\begin{itemize}
+\item \citet{Crawetal1999} is a good summary of theories and methods, while the
+empirical approach could be flawed.
+
+\item \citet{Crisci2001} is an historical account of biogeography, and is
+ilustrative of the so called forces that shaped present biogeographic thought.
+\end{itemize}

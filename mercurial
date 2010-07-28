@@ -1,0 +1,4 @@
+hg commit -m martitracks 05a
+hg push
+hg add
+hg status

@@ -1,0 +1,23 @@
+\contentsline {chapter}{Forewords}{11}{chapter*.4}
+\contentsline {chapter}{Introduction}{13}{chapter*.5}
+\contentsline {section}{Panbiogeography}{13}{section*.6}
+\contentsline {subsection}{Track analysis}{14}{subsection*.7}
+\contentsline {subsection}{Croizat's manual reconstruction}{16}{subsection*.8}
+\contentsline {subsection}{Page's Spanning graphs}{16}{subsection*.9}
+\contentsline {subsection}{Craw's tracks compatibility analysis}{17}{subsection*.10}
+\contentsline {subsection}{Parsimony Analysis of Endemicity}{17}{subsection*.11}
+\contentsline {section}{Suggested literature}{19}{section*.12}
+\contentsline {chapter}{MartiTracks, the program}{21}{chapter*.13}
+\contentsline {section}{Download the program and a data set}{22}{section*.14}
+\contentsline {section}{Command modes}{23}{section*.15}
+\contentsline {subsection}{Text user interface}{23}{subsection*.16}
+\contentsline {chapter}{Worked example: test0.dat}{27}{chapter*.17}
+\contentsline {section}{Test0.dat}{27}{section*.18}
+\contentsline {subsection}{Command line interface}{28}{subsection*.19}
+\contentsline {subsection}{Results of test0.dat analysis}{30}{subsection*.20}
+\contentsline {chapter}{MartiTracks commands}{33}{chapter*.21}
+\contentsline {section}{Text interface mode}{33}{section*.22}
+\contentsline {section}{Bash command mode}{34}{section*.23}
+\contentsline {chapter}{Bibliography}{37}{chapter*.24}
+\contentsline {chapter}{Index}{43}{chapter*.25}
+\contentsfinish 
