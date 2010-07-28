@@ -1,0 +1,126 @@
+\label{ch:commands}
+\index{commands}
+
+\section{Text interface mode}
+\label{tui_commands}
+\index{commands:text interface}
+
+	general
+	
+	\tui{l} == list			List all tracks
+	
+	
+	comparing *tracks*
+		
+	\tui{a} == all			Track all the species using MSTs to compare			
+	
+	\tui{g} == group		Track a group of contiguous species
+	
+	\tui{p} == pair			Track a pair of species (contiguous or not)
+	  
+	In all the three cases a new MST=track will be created if the
+	species compared are congruent, while in a [p]air comparison
+	only a single track could be created. In an [a]ll/[g]roup 
+	comparison, there could be more than one track.
+
+
+	comparing *segments*
+		
+	\tui{s} == all			Track all the species using segments to compare			
+		
+	\tui{t} == pair			Track a pair of species (contiguous or not)
+	  
+
+
+
+	join
+
+	
+	\tui{u} == join group	Join a group of contiguous tracks if a given pair 
+
+							has a minimal congruence equal or higher than the
+
+							minimal congruence inputed in the value file or
+
+							the default value used in the TUI. If you want to join
+
+							a group regardless of the minimal congruence value,
+
+							reduce the min. cong. value to 0.0. After this late
+
+							analysis, replace the original min. cong. value
+						
+
+	\tui{j} == join pair		Join two, contiguous or not, tracks independent of
+
+						the minimal congruence value
+						
+
+	congruence calculation
+	
+	\tui{o} == congr. group	Calculate the congruence by pairs of a contiguous group,
+
+						as ther output is a list, is easier to reade a small 
+
+						group than a large group
+							
+
+	\tui{n} == congr. pair	Calculate the congruence of a single pair 
+	
+
+	modify decision rules
+	
+	\tui{c} == cut			Change the minimal cut value
+
+	\tui{r} == rules			Modify rules 
+
+	\tui{m} == min. cong.		Change the minimal congruence value (see join)
+	
+
+
+\section{Bash command mode}
+\label{bash_commands}
+\index{commands:bash}
+
+A bash command is an instruction that will perform an analysis equal to the analysis made in the text user interface [ see page \pageref{tui_commands}]. This mode is more appropriated to medium to huge data sets, where the analysis could last more than a few minutes or to test different parameter values. 
+
+The commands are given in the equivalence of the TUI, with a short explanation.
+
+
+		\cmd{kmlgen} == 	write to the kml file ONLY the generalized tracks (default). Must be in the file before the analysis. 
+
+		\cmd{kmlall} == 	write to the kml file all, individual and generalized tracks. Must be in the file before the analysis.
+
+
+		\cmd{croizat0} ==\\ 	join (individual tracks),\\ 
+							track  (individual tracks),\\ 
+							join (generalized tracks) \\
+							%
+= \tui{u} (1 - \# individual tracks), %
+\tui{a},
+\tui{u} ( individual tracks + 1) total tracks
+
+		\cmd{croizat1} == \\	track  (individual tracks)\\ 
+							join (generalized tracks)\\ 
+= \tui{a}, \tui{u} (individual tracks +1) total tracks
+
+
+
+A sample command file is 
+
+
+\cmd{set cv 1.5}\\
+\cmd{set lmax 2.0}\\
+\cmd{set lmin 0.6}\\
+\cmd{set maxline 3.0}\\
+\cmd{set ci 0.80}\\
+\cmd{kmlall}\\
+\cmd{croizat0}\\
+
+So, these seven lines in a file will change the default parameters to 
+\cmd{cv = 1.5},
+\cmd{lmax = 2.0},
+\cmd{lmin = 0.6},
+\cmd{maxline = 3.0},
+\cmd{ci = 0.80},
+and will use these values to join the indidual tracks if the congruence value of the two MSTs compared is larger than  0.80, then \mt  \_will track those resulting MST to obtain the generalized tracks and will eliminate (joint) those redundant tracks using the same rule used before (\cmd{ci = 0.80}), and will output the individual and the generalized tracks.   
