@@ -122,7 +122,7 @@ if orden1 =  'set' then
    				writeln(regla1:3:2);
    				writeln(regla2:3:2);
    				writeln(regla3:3:2);
-							writeln(congruencia_minima:3:2);
+				writeln(congruencia_minima:3:2);
    				end;
    				ordenok:=true;
    				lectura_ordenes;
@@ -356,3 +356,183 @@ if (not ordenok) and (not eof(ordenes)) then begin
  
 end; {entrar_comandos}
 
+
+
+
+
+procedure pre_set;
+
+var
+i,
+j,
+min,max
+		: longint;
+	
+orden0:
+               char;
+               
+orden1
+		: string;
+
+setcv,
+setlmax,
+setlmin,
+setmaxl,
+setci
+		: boolean;
+
+				
+		
+procedure lectura_ordenes;
+begin
+ordenok:=false;
+orden1:='';
+repeat
+read(ordenes,orden0);
+if orden0='#' then  begin readln(ordenes); lectura_ordenes; end;
+orden1:=orden1+orden0; 
+until  (orden0=' ') or (orden0=';') or (eof(ordenes)) or (eoln(ordenes));
+orden1:=orden(orden1);
+end;
+
+
+begin {pre_set}
+
+				prekaos:=true;
+				clrscr;
+   				max:=num_especies;
+   				min:=1;
+   				kmlgen:=true;
+
+writeln ('Reading presetting...');
+i:=0;
+while (not eof(ordenes)) do 
+begin
+lectura_ordenes;
+orden1:=orden(orden1);
+i:=i+1;
+clrscr;
+if (not eof(ordenes)) then writeln ('Reading line ',i,' = ',orden1);
+
+
+ if orden1 =  'printkml' then
+   				begin
+   				ordenok:=true;
+   				printkml:=true;
+				end; 
+
+ if orden1 =  'noprintkml' then
+   				begin
+   				ordenok:=true;
+   				printkml:=false;
+				end; 
+
+
+ if orden1 =  'kmlgen' then
+   				begin
+   				ordenok:=true;
+   				kmlgen:=true;
+   				end;
+
+
+ if orden1 =  'kmlall' then
+   				begin
+   				ordenok:=true;
+   				kmlgen:=false;
+   				kmlall:=true;
+   				end;
+
+
+if (orden1 =  'dataxyl') or (orden1 =  'datalxy')   then
+   				begin
+   				ordenok:=true;
+   				if orden1 =  'dataxyl' then tipo:='xyl';
+   				if orden1 =  'datalxy' then tipo:='lxy';
+   				end;
+
+if orden1 =  'set' then
+   				begin
+   				if kaos3 then begin
+   				writeln('old values ---');
+   				writeln(corte:3:2);
+   				writeln(regla1:3:2);
+   				writeln(regla2:3:2);
+   				writeln(regla3:3:2);
+				writeln(congruencia_minima:3:2);
+   				end;
+   				ordenok:=true;
+   				lectura_ordenes;
+   				ordenok:=true;
+   				orden1:=orden(orden1);
+   				readln(ordenes,rtemp);
+   				writeln('set ---',orden1,' to',rtemp);
+   				if (orden1 =  'cv')       and not setcv    then 
+														begin 
+														corte:=rtemp;
+														setcv:=true;
+														end;
+   				if (orden1 =  'lmax')     and not setlmax  then 
+														begin 
+														regla1:=rtemp;
+														setlmax:=true;
+														end;
+   				if (orden1 =  'lmin')     and not setlmin  then 
+														begin 
+														regla2:=rtemp;
+														setlmin:=true;
+														end;
+   				if (orden1 =  'maxline')  and not setmaxl  then 
+														begin 
+														regla3:=rtemp;
+														setmaxl:=true;
+														end;
+   				if (orden1 =  'ci')       and not setci    then 
+														begin 
+														congruencia_minima:=rtemp;
+														setci:=true;
+														end;
+   				if kaos3 then begin   				
+   				writeln('new values ',orden1);
+   				writeln(corte:3:2);
+   				writeln(regla1:3:2);
+   				writeln(regla2:3:2);
+   				writeln(regla3:3:2);
+   				writeln(congruencia_minima:3:2);
+								end;
+   				end;
+
+if orden1 =  'quiet' then
+   				begin
+   				ordenok:=true;
+   				sip:=false;
+   				prekaos:=false;
+   				kaos:=false;
+   				kaos2:=false;
+   				kaos3:=false;
+   				end;
+
+
+if (orden1 =  'quiet1') or (orden1 = 'noquiet') then
+   				begin
+   				ordenok:=true;
+   				sip:=false;
+   				prekaos:=true;
+   				kaos:=false;
+   				kaos2:=false;
+   				kaos3:=false;
+   				end;
+
+
+if orden1 =  'noquiet3' then
+   				begin
+   				ordenok:=true;
+   				sip:=true;
+   				prekaos:=true;
+   				kaos:=true;
+   				kaos2:=true;
+   				kaos3:=true;
+   				end;
+
+ end;
+ 
+end; {pre_set}

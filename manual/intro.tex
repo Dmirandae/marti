@@ -72,17 +72,18 @@ on a map that connect different localities or distribution points of a
 particular taxon or group of taxa, so that the sum of the segment lengths that
 connect all the distribution points is the smallest possible. In the graph
 theory words, the individual track is a minimum spanning tree
-\citep{Crawetal1999, Morrone2004c, Page1987}
-\index{Track analysis:generalized tracks}
+\citep{Crawetal1999, Morrone2004c, Page1987}.
 
+
+\index{Track analysis:generalized tracks}
 Generalized tracks or standard tracks are called repetitive patterns because
 summarized distributions of diverse individual taxa \citep{Michaux1989}. These
 are lines on a map resulting from the superimposition of the individual tracks.
 Generalized tracks are interpreted as distributional patterns of ancestral biota
 that had been fragmented by tectonic and climatic events \citep{Craw1988}. These
-panbiogeographic element is considered conjectures on a common biogeography
+panbiogeographic element is considered as a conjecture (=hypothesis) of a common biogeography
 history or primary biogeography homology sensu  \citet{Morrone2001a}, which means
-that analyzed taxa are spatiotemporally integrated in a biota \citep{Craw1983a,
+that analyzed taxa are spatio-temporally integrated in a biota \citep{Craw1983a,
 Morrone2001a, Morrone2004c}.
 \index{Track analysis:nodes}
 
@@ -159,8 +160,8 @@ steps \citep{Craw1989a, Grehan2001c, Morrone2004c}:
 
 1. Construct individual tracks for different taxa from distribution localities using a MST,
 
-2. Generate an areas matrix for individual tracks where the presence of the areas is
-represented by ''1'' and absence by ''0''.
+2. Generate a matrix  (areas x individual tracks), where the presence of an area is
+represented by ''1'' and its absence by ''0''.
 
 3. Find the largest clique for compatible individual tracks which is considered the generalized track.
 
@@ -181,11 +182,11 @@ MorroneMarquez2001, Morrone2004c}. Its algorithm includes the following steps
 
 1. Construct individual tracks for different taxa from distribution localities using a MST,
 
-2. Generate an areas matrix for individual tracks where the presence of a species is represented by ''1'' and the absence by ''0''. Within this step, an extra area is added with ''0'' (all species absence) for polarized areas cladogram,
+2. Generate a matrix  (areas x individual tracks), where the presence of a species is represented by ''1'' and the absence by ''0''. Within this step, an extra area is added with ''0'' (all species absence) to polarize the topology (incorrectly called an 'area cladogram' \citep{pae2008}),
 
-3. Analize the matrix using a parsimony algorithm. Each clade formed by at least two individual tracks is considered a generalized track,
+3. Analyze the matrix using a parsimony algorithm. Each clade supported by at least two individual tracks (as ''synapomorphies'') is considered a generalized track,
 
-4. ''Disconnect'' or delete the species that support the different clades and reanalyze the matrix to search clades that are supported by other taxa,
+4. ''Disconnect'' or delete the species that support the different clades and reanalyze the matrix to search clades that are supported by other taxa \citep{Garcia-Barros2002},
 
 5. Indicate on a map the generalized tracks, baselines and nodes.
 
@@ -220,7 +221,7 @@ package ''Croizat'' \citep{Cavalcanti2009b}.
 Grid analysis such as PAE (Parsimony Analysis of Endemicity) has been
 considered a panbiogeographic approach \citep{Crawetal1999, Luna-vegaetal2000,
 MorroneMarquez2001, Morrone2004c}, but some authors do not consider it a
-historical biogeography method \citep{Humphries2000, Garcia-Barros2002}.
+historical biogeography method \citep{Humphries2000, Garcia-Barros2002, pae2008}.
 Although this method has been widely used \citep{Luna-vegaetal2000,
 MorroneMarquez2001, Huidobroetal2006, Mihocetal2006, Espinosa-Perezetal2009,
 Contreras-Medinaetal2007}, its implementation to the panbiogeographic analysis
@@ -243,5 +244,5 @@ large data set due to overcrowded points \citep{Franco-Rosselli2001, Liria2008}.
 empirical approach could be flawed.
 
 \item \citet{Crisci2001} is an historical account of biogeography, and is
-ilustrative of the so called forces that shaped present biogeographic thought.
+illustrative of the so called forces that shaped present biogeographic thought.
 \end{itemize}

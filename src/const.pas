@@ -8,8 +8,9 @@ CONST
 	multiplicador = 10000;
 	EPS    = 0.000001;         // smallest positive value: less than that to be considered zero
     EPSEPS = EPS * EPS;        // and its square
-    version    =  ' Beta 05-b (64) ';
-    revision   =  ' 27 07 2010 ';
+  
+    version    =  ' Beta 05-a2 (64) ';
+    revision   =  ' 06 08 2010 ';
     nombre     =  ' Marti tracks ';
     
     a1= 2;
