@@ -9,11 +9,8 @@ CONST
 	EPS    = 0.000001;         // smallest positive value: less than that to be considered zero
     EPSEPS = EPS * EPS;        // and its square
 
-	
-
-
     version    =  ' Beta 05-a (32) ';
-    revision   =  ' 26-07-2010 ';
+    revision   =  ' 21-07-2010 ';
     nombre     =  ' Marti tracks ';
     
     a1= 2;

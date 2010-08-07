@@ -67,7 +67,7 @@ tipo:='lxy';
 			if FileExists(beta) then 
 					begin 
 					writeln ('otuput file :[',beta,'] exists'); 
-					sleep(5000); 
+					sleep(100); 
 					unodos2; 
 					end 
 			else begin 
