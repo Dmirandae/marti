@@ -1,0 +1,9 @@
+Package: MaRti
+Type: Package
+Title: Panbiogeographic analysis using a geometricla Approach
+Version: 0.001.Alpha
+Date: 2014-10-08
+Author: Daniel R. Miranda-Esquivel
+Maintainer: Daniel R. Miranda-Esquivel <dmiranda@uis.edu.co>
+Description: A clone of MartiTracks in R
+License: GPL 3.x
