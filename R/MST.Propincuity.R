@@ -1,7 +1,10 @@
+
+
 MST.Propincuity <- function (distance.Matrix){
   ##
   ## Based on ape::mst function
   ##
+
   
   if (class(distance.Matrix) == "dist") 
     distance.Matrix <- as.matrix(distance.Matrix)

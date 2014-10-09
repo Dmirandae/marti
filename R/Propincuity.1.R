@@ -1,5 +1,6 @@
 
 Propincuity.1 <- function (dist.Matrix) {
+
   
   ## forma 2 de calculo sin usar MST
   dist.Matrix <- as.matrix(distance) 
