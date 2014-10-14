@@ -8,10 +8,10 @@
 ## libraries
 ##
 
-library(maptools)
-library(rgeos)
-library(nnclust)
-library(shapefiles)
+#library(maptools)
+#library(rgeos)
+#library(nnclust)
+#library(shapefiles)
 
 ##
 ## functions
